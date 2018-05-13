@@ -1,0 +1,47 @@
+In my YouTube tutorial, on AnalystRising, I go over how to show/hide text and I use the example of passwords.
+Below is the code I used in the example in case you would like to use it!
+
+Feel free to copy,paste and adapt it for your use!!!
+
+"""
+SHOW/HIDE PASSWORDS
+"""
+
+
+import tkinter as tkr
+
+master = tkr.Tk()
+master.geometry("200x100")
+master.title("Show/Hide Password")
+
+
+
+tkr.Label(master, text="Password").grid(row=1)
+
+
+e1 = tkr.Entry(master,show="")
+e1.grid(row=1, column=1)
+
+
+def call1():
+    e1 = tkr.Entry(master,show='')
+    e1.grid(row=1, column=1)
+
+def call2():
+    e1 = tkr.Entry(master,show='*')
+    e1.grid(row=1, column=1)   
+
+    
+"""Button"""
+button1 = tkr.Button(master, width=7,height=1, text="Show", command=call1) 
+button1.grid(row=2,column=1, padx=3, pady=3)
+button2 = tkr.Button(master, width=7,height=1, text="Hide", command=call2) 
+button2.grid(row=3,column=1, padx=3, pady=3)
+
+
+
+"""Activate"""
+tkr.mainloop()
+
+
+
